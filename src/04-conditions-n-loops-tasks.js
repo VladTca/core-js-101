@@ -205,7 +205,7 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-  // Создаем копии параметров и переставляем их при необходимости
+
   const start = Math.min(a, b);
   const end = Math.max(a, b);
 
@@ -336,12 +336,12 @@ function isBracketsBalanced(str) {
   };
 
   const balanced = str.split('').reduce((isBalanced, char) => {
-    if (!isBalanced) return false; // Если уже не сбалансирован, возвращаем false
+    if (!isBalanced) return false;
     if (opening.has(char)) {
       stack.push(char);
     } else if (closing[char]) {
       if (stack.pop() !== closing[char]) {
-        return false; // Несоответствие, возвращаем false
+        return false;
       }
     }
     return isBalanced;

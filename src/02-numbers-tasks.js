@@ -183,12 +183,10 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  // Определяем делитель на основе степени десяти
   const divisor = 10 ** pow;
-
-  // Округляем число до ближайшего делителя
   return Math.round(num / divisor) * divisor;
 }
+
 /**
  * Returns true is the number is prime; otherwise false.
  * See: https://en.wikipedia.org/wiki/Primality_test
