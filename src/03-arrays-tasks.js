@@ -133,7 +133,9 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 'x', 0  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-  return arr.slice(0, index).concat(item, arr.slice(index));
+  arr.splice(index, 0, item);
+
+  return arr;
 }
 
 /**
@@ -236,7 +238,7 @@ function getMovingSum(arr) {
  *    [ 1 ]             => [ 1 ]
  */
 function getSecondItems(arr) {
-  return arr.filter((_, i) => i % 2 === 0);
+  return arr.filter((item, index) => index % 2 !== 0);
 }
 
 /**
