@@ -205,7 +205,6 @@ function findFirstSingleChar(str) {
  *
  */
 function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
-
   const start = Math.min(a, b);
   const end = Math.max(a, b);
 
